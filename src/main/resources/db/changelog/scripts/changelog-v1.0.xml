@@ -20,4 +20,13 @@
         </delete>
     </changeSet>
 
+    <changeSet id="5" author="freesky">
+        <update
+                schemaName="liquibase"
+                tableName="persons">
+            <column name="address" value="Shanghai" />
+            <where>name='Rose'</where>
+        </update>
+    </changeSet>
+
 </databaseChangeLog>

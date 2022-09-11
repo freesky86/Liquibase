@@ -3,6 +3,7 @@ package com.freesky.demo.liquibase.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="persons")
@@ -21,6 +22,9 @@ public class Person {
 
     @Column
     private String address;
+
+    @Column
+    private LocalDate birthday;
 
     private Person() {
         // for persistence
