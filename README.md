@@ -1,7 +1,9 @@
 # Liquibase
 Liquibase and Spring Boot
 
-Refer to https://www.youtube.com/watch?v=xjXHecGOy84&t=926s
+use sql script
+
+Refer to https://www.bilibili.com/video/BV1ii4y1P73H?spm_id_from=333.337.search-card.all.click
 
 1.get
 http://localhost:8080/person/person
