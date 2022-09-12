@@ -21,9 +21,26 @@ public class PersonController {
 
     @PostMapping("person")
     public String creatPerson(@RequestParam String name) {
-        personRepository.save(new Person(name, "6.7"));
-        return personRepository.findByName(name) + " Saved successfully!";
+        Person person = personRepository.save(new Person(name, "6.7"));
+        return person.getName() + "(id=" + person.getId() + ")" + " Saved successfully!";
     }
+
+    @PostMapping("add")
+    public String addPerson(@RequestParam String name,
+                            @RequestParam String height,
+                            @RequestParam String address,
+                            @RequestParam String birthday) {
+        Person person = personRepository.save(new Person(name, height, address, birthday));
+        return person.getName() + "(id=" + person.getId() + ")" + " Saved successfully!";
+    }
+
+    @PostMapping("delete")
+    public String deletePerson(@RequestParam String name) {
+        int id = personRepository.findByName(name);
+        personRepository.deleteById(id);
+        return name + " is deleted successfully!";
+    }
+
 
     @GetMapping("person")
     public List<Person> findAllPerson() {
