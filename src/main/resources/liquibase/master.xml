@@ -7,4 +7,5 @@
 
     <include file="sql/changelog-DML-01.sql" relativeToChangelogFile="true" />
     <include file="sql/changelog-DML-02.sql" relativeToChangelogFile="true" />
+    <include file="sql/changelog-DML-03.sql" relativeToChangelogFile="true" />
 </databaseChangeLog>
