@@ -21,3 +21,10 @@ update liquibase.persons
 set birthday='2000-03-03'
 where id=1
 ;
+
+-- changeset max:04 cloumnName:birthday
+-- another update
+update liquibase.persons
+set birthday='2002-02-02'
+where id=2
+;

@@ -10,3 +10,15 @@ http://localhost:8080/person/person
 
 2.post
 http://localhost:8080/person/person?name=Milly
+
+Refer to https://docs.liquibase.com/concepts/changelogs/sql-format.html
+
+use sql format file and can add more sql script in one file.
+
+for example: changelog-DML-03.sql
+
+at the top of the file, we must input
+
+--liquibase formatted sql
+
+and then use the format "changeset <author>:<id>"
